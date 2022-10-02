@@ -3,10 +3,10 @@ package handler
 import (
 	"api/data"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
+	"math/rand"
 
 	"github.com/labstack/echo/v4"
 )
@@ -38,7 +38,18 @@ func get_json(e echo.Context) error {
 		panic(err)
 	}
 
-	fmt.Println(resp[1])
-	return e.JSON(http.StatusOK, resp)
+	res := resp[random()].Answer
+	return e.JSON(http.StatusOK, res)
 }
 
+func random() int {
+	v := rand.Intn(100)
+
+	if v < 45 {
+		return 0
+	} else if v < 90 {
+		return 1
+	} else {
+		return 2
+	}
+}
