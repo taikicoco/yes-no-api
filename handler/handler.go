@@ -2,7 +2,6 @@ package handler
 
 import (
 	"api/data"
-	_ "api/data"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -14,17 +13,12 @@ import (
 
 func Routes(e *echo.Echo) error {
 
-	e.GET("/",hello)
-	e.GET("/get",get)
+	e.GET("/",get_json)
 
 	return nil
 }
 
-func hello(e echo.Context) error {
-	return e.String(http.StatusOK,"heelo")
-}
-
-func get(e echo.Context) error {
+func get_json(e echo.Context) error {
 
 	var resp data.Answer
 	f, err := os.Open("./data/data.json")
