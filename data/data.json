@@ -1,0 +1,14 @@
+[
+	{
+        "id":1,
+        "answer":"yes"
+    },
+    {
+        "id":2,
+        "answer":"no"
+    },
+    {
+        "id":3,
+        "answer":"maybe"
+    }	
+]
