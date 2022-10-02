@@ -1,14 +1,14 @@
 [
 	{
         "id":1,
-        "answer":"yes"
+        "answer":"YES"
     },
     {
         "id":2,
-        "answer":"no"
+        "answer":"NO"
     },
     {
         "id":3,
-        "answer":"maybe"
+        "answer":"MAYBE"
     }	
 ]
